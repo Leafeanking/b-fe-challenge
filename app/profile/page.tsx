@@ -23,17 +23,17 @@ const page = (props: Props) => {
   const [cookies, setCookie, removeCookie] = useCookies(["profile"]);
   const [isEditing, setIsEditing] = useState(false);
   const [profile, setProfile] = useState(DEFAULT_PROFILE);
-  const [initialLoad, setInitialLoad] = useState(true)
+  const [initialLoad, setInitialLoad] = useState(true);
 
   useEffect(() => {
     if (cookies.profile) {
       setProfile(cookies.profile as Profile);
     }
-    setInitialLoad(false)
+    setInitialLoad(false);
   }, [cookies.profile]);
 
   if (initialLoad) {
-    return null
+    return null;
   }
 
   if (isEditing) {

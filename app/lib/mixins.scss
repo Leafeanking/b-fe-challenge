@@ -1,6 +1,6 @@
 @mixin baseContainer($backgroundColor) {
-    padding: 80px;
-    background-color: $backgroundColor;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 80px;
+  background-color: $backgroundColor;
+  max-width: 1200px;
+  margin: 0 auto;
 }

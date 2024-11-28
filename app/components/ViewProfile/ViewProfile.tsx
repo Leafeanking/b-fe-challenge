@@ -14,7 +14,6 @@ type Props = {
 };
 
 const ViewProfile = ({ profile, setIsEditing }: Props) => {
-    
   return (
     <div className={styles.profileView}>
       <Typography variant="h1">

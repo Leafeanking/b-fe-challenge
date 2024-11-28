@@ -1,6 +1,5 @@
-"use client"
+"use client";
 import { createTheme } from "@mui/material/styles";
-
 
 const theme = createTheme({
   typography: {
@@ -14,26 +13,26 @@ const theme = createTheme({
     MuiFab: {
       styleOverrides: {
         root: {
-          height: '48px',
-          width: '48px',
-          opacity: .5,
-        }
-      }
+          height: "48px",
+          width: "48px",
+          opacity: 0.5,
+        },
+      },
     },
     MuiButton: {
-        styleOverrides: {
-            root: {
-                borderRadius: '8px',
-                height: '48px',
-                textTransform: 'none',
-            }
-        }
-    }
+      styleOverrides: {
+        root: {
+          borderRadius: "8px",
+          height: "48px",
+          textTransform: "none",
+        },
+      },
+    },
   },
   palette: {
     secondary: {
-        main: '#054553',
-    }
+      main: "#054553",
+    },
   },
   cssVariables: true,
 });

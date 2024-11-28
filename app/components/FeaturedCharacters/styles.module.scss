@@ -1,16 +1,16 @@
-@import '../../lib/colors.scss';
-@import '../../lib/mixins.scss';
+@import "../../lib/colors.scss";
+@import "../../lib/mixins.scss";
 
 .featureTitle:global(.MuiTypography-root) {
-    color: $fontWhite;
-    text-align: center;
-    margin: 0 0 40px;
-    line-height: 43.2px;
-    font-size: 36px;
-    font-weight: 400;
+  color: $fontWhite;
+  text-align: center;
+  margin: 0 0 40px;
+  line-height: 43.2px;
+  font-size: 36px;
+  font-weight: 400;
 }
 
 .container {
-    @include baseContainer($disneyGreen);
-    padding-top: 40px;
-}   
+  @include baseContainer($disneyGreen);
+  padding-top: 40px;
+}

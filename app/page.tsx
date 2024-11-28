@@ -4,7 +4,7 @@ import FeaturedCharacters from "./components/FeaturedCharacters/FeaturedCharacte
 import endpoints from "./lib/endpoints";
 import { fetchCharacters } from "./lib/fetchCharacters";
 import { Character } from "./types";
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 
 async function generateMetadata() {
   return {
@@ -13,17 +13,17 @@ async function generateMetadata() {
 }
 
 export default async function Home() {
-  const characters = await fetchCharacters({ search: "", pageSize: '8'});
+  const characters = await fetchCharacters({ search: "", pageSize: "8" });
 
   return (
     <>
       <div className={styles.container}>
-        <Stack direction="row" gap={2} sx={{flexWrap: 'wrap'}}>
+        <Stack direction="row" gap={2} sx={{ flexWrap: "wrap" }}>
           {characters.map((character) => (
             <CharacterCard key={character._id} character={character} />
           ))}
         </Stack>
-        </div>
+      </div>
       <FeaturedCharacters />
     </>
   );

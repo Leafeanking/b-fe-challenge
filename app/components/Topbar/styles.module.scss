@@ -1,19 +1,19 @@
-@import '@/app/lib/mixins';
-@import '@/app/lib/colors';
+@import "@/app/lib/mixins";
+@import "@/app/lib/colors";
 
 .topbar {
-    @include baseContainer(transparent);
+  @include baseContainer(transparent);
 
-    padding: 40px 0;
-    gap: 40px;
+  padding: 40px 0;
+  gap: 40px;
 }
 
 .profileFAB {
-    height: 48px;
-    width: 48px;
-    background-color: $disneyGreen;
+  height: 48px;
+  width: 48px;
+  background-color: $disneyGreen;
 
-    &:hover {
-        background-color: ligthen($disneyGreen, 20%);
-    }
+  &:hover {
+    background-color: ligthen($disneyGreen, 20%);
+  }
 }

@@ -1,6 +1,6 @@
-@import './lib/mixins.scss';
-@import './lib/colors.scss';
+@import "./lib/mixins.scss";
+@import "./lib/colors.scss";
 
 .container {
-    @include baseContainer($lightBlue)
+  @include baseContainer($lightBlue);
 }

@@ -1,5 +1,5 @@
-import { proxy } from 'valtio'
+import { proxy } from "valtio";
 
-const state = proxy({ search: '' })
+const state = proxy({ search: "" });
 
-export default state
+export default state;

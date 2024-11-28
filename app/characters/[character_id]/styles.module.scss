@@ -1,35 +1,33 @@
-@import '../../lib/colors.scss';
-@import '../../lib/mixins.scss';
-
+@import "../../lib/colors.scss";
+@import "../../lib/mixins.scss";
 
 .container {
-    @include baseContainer($lightBlue);
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-
+  @include baseContainer($lightBlue);
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
 }
 
 .imageWrapper {
-    border-radius: 16px;
-    height: 529px;
-    width: 439px;
-    overflow: hidden;
-    position: relative;
+  border-radius: 16px;
+  height: 529px;
+  width: 439px;
+  overflow: hidden;
+  position: relative;
 }
 
-.highlights > * { 
-    padding: 24px 0;
+.highlights > * {
+  padding: 24px 0;
 }
 
 .updatedAt:global(.MuiTypography-root) {
-    font-size: 12px;
-    line-height: 16px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .caracterName:global(.MuiTypography-root) {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    padding-bottom: 24px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  padding-bottom: 24px;
 }

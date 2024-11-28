@@ -1,10 +1,9 @@
-'use server'
+"use server";
 
-import { permanentRedirect } from 'next/navigation'
-
+import { permanentRedirect } from "next/navigation";
 
 const NoPageHere = () => {
-  permanentRedirect('/')
-}
+  permanentRedirect("/");
+};
 
-export default NoPageHere
+export default NoPageHere;
