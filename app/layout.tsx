@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import StyledComponentsRegistry from "./lib/registery";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
+import FeaturedCharacters from "./components/FeaturedCharacters/FeaturedCharacters";
+import { Lato } from "next/font/google";
+import Footer from "./components/Footer/Footer";
+import Topbar from "./components/Topbar/Topbar";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const lato = Lato({
+  weight: ["100", "300", "400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-lato",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +27,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body className={lato.className}>
+        <Topbar />
+        <main>
+          <AppRouterCacheProvider>
+            <ThemeProvider theme={theme}>
+              <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            </ThemeProvider>
+          </AppRouterCacheProvider>
+          
+        </main>
+        <Footer />
       </body>
     </html>
   );

@@ -1,0 +1,13 @@
+@import "@/app/lib/colors";
+
+.searchInput {
+  :global(.MuiInputBase-root) {
+    height: 48px;
+    border-radius: 100px;
+    background: $lightBlue;
+    color: $fontBlack;
+    font-size: 15px;
+    line-height: 18px;
+    outline: none;
+  }
+}
