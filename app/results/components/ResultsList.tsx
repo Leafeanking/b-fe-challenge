@@ -1,9 +1,9 @@
 "use client";
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import CharacterCard from "@/app/components/CharacterCard/CharacterCard";
 import FeaturedCharacters from "@/app/components/FeaturedCharacters/FeaturedCharacters";
 import { fetchCharacters } from "@/app/lib/fetchCharacters";
-import styles from "../../styles.module.scss";
+import styles from "./styles.module.scss";
 import { useEffect, useState } from "react";
 import { Character } from "@/app/types";
 import { useSnapshot } from "valtio";
@@ -30,6 +30,7 @@ function ResultsList({}: Props) {
 
   return (
     <div className={styles.container}>
+      <Typography variant="h1">Search Results - {search}</Typography>
       <Stack direction="row" gap={2} sx={{ flexWrap: "wrap" }}>
         {characters.map((character) => (
           <CharacterCard key={character._id} character={character} />
