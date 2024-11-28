@@ -10,14 +10,14 @@ type Props = {};
 const DEFAULT_PROFILE = {
   firstName: "John",
   lastName: "Doe",
-  updatedAt: "2021-04-12T01:33:34.458Z",
+  updatedAt: "2020-04-12T01:33:34.458Z",
   city: "San Francisco",
   state: "CA",
   favoriteRide: "Space Mountain",
   favoriteCharacter: "Elsa",
   favoriteMovie: "Moana",
   favoriteDisneyland: "Disney World, Florida",
-  birthdate: "2024-11-28T02:24:27.195Z",
+  birthdate: "2000-04-12T01:33:34.458Z",
 };
 const page = (props: Props) => {
   const [cookies, setCookie, removeCookie] = useCookies(["profile"]);
