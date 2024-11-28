@@ -31,7 +31,10 @@ const EditProfile = ({ profile, setIsEditing }: Props) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
-    setCookie("profile", Object.fromEntries(formData));
+    setCookie("profile", {
+      updatedAt: new Date().toISOString(),
+      ...Object.fromEntries(formData),
+    });
     setIsEditing(false);
   };
 

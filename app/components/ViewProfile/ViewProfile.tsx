@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import dayjs from "dayjs";
 import advancedFormat from "dayjs/plugin/advancedFormat";
+import relativeTime from "dayjs/plugin/relativeTime";
 
 dayjs.extend(advancedFormat);
 
@@ -23,6 +24,9 @@ const ViewProfile = ({ profile, setIsEditing }: Props) => {
         Last Updated {dayjs(profile.updatedAt).format("MMMM Do ,YYYY")}
       </Typography>
       <Stack gap={2}>
+        <Typography>
+          Age: {dayjs().diff(dayjs(profile.birthdate), "year")}
+        </Typography>
         <Typography>
           Location: {profile.city}, {profile.state}
         </Typography>
