@@ -38,4 +38,8 @@
   :global(.statePicker) {
     flex-basis: 105px;
   }
+
+  span {
+    color: $error;
+  }
 }
